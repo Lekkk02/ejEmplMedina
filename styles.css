@@ -1,0 +1,24 @@
+.navbar{
+background-color: rgb(213, 218, 223);
+justify-content: center;
+box-shadow: 0 0.8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.container {
+    display: flex;
+    justify-content: space-evenly !important;
+}
+.nav-link:hover{
+    transform: scale(1.2);
+}
+
+.mainSec{
+    margin: 30px 20px 50px 20px !important;
+}
+#stats{
+    margin: 30px 20px 50px 20px !important;
+}
+
+.btn{
+    margin-top: 10px;
+}
