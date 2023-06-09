@@ -6,6 +6,10 @@ if(isset($_SESSION['EmplBackup'])){
   $arrayEmpl = $_SESSION['EmplBackup'];
 
 }
+if(isset($_POST['destroy'])){
+  session_destroy();
+  header("Location: index.php");
+}
 class Empleado {
     public $nombre_Emp;
     public $apellido_Emp;
@@ -43,7 +47,6 @@ class Empleado {
 
     if((isset($_POST['txtNombre']) && isset($_POST['txtApellido']) && isset($_POST['txtEdad'])) && (isset($_POST['txtCivil']) && isset($_POST['txtSexo'])  && isset($_POST['txtSueldo']))){
         if((!empty($_POST['txtNombre']) && !empty($_POST['txtApellido']) && !empty($_POST['txtEdad'])) && (!empty($_POST['txtCivil']) && !empty($_POST['txtSexo'])  && !empty($_POST['txtSueldo']))){
-            echo "Exito";
             $nombre = $_POST['txtNombre'];
             $apellido = $_POST['txtApellido'];
             $edad = $_POST['txtEdad'];
@@ -169,6 +172,13 @@ class Empleado {
           name="btn"
         >
           Registrar
+        </button>
+        <button
+          type="submit"
+          class="btn btn-secondary"
+          name="destroy"
+        >
+          Borrar Registros
         </button>
       </form>
 
